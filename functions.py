@@ -3,8 +3,6 @@ import requests
 import arrow
 import json
 
-from pprint import pprint
-
 def get_current_month():
 	"""
 	Use arrow to find the current month.
@@ -61,7 +59,6 @@ def get_budget_id_from_name(headers, budget_name):
 	"""
 	budget_id = None
 	budgets = get_budgets(headers)
-	#pprint(budgets)
 	for budget in budgets['data']['budgets']:
 		if budget['name'] == budget_name:
 			budget_id = budget['id']
