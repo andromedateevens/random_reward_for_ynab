@@ -1,4 +1,4 @@
-![alt text](img/works_with_ynab.png "Download as zip")
+![alt text](img/works_with_ynab.png "Works with YNAB!")
 
 # Random Reward for YNAB
 A script that uses an existing YNAB budget and the power of intermittent reinforcement to incentivize you to complete tasks. It uses the YNAB API to stochastically transfer money to a fun money category you set every time you finish a task. 
