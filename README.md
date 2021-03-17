@@ -1,3 +1,5 @@
+![alt text](img/works_with_ynab.png "Download as zip")
+
 # Random Reward for YNAB
 A script that uses an existing YNAB budget and the power of intermittent reinforcement to incentivize you to complete tasks. It uses the YNAB API to stochastically transfer money to a fun money category you set every time you finish a task. 
 
@@ -18,7 +20,7 @@ $ git clone https://github.com/andromedateevens/random_reward_for_ynab && cd ran
 
 You can also download the project as a zip file. To do this, find the green button labelled Code, then click on "Download ZIP"
 
-![alt text](img/download-zip.png "Download as zip")
+![alt text](img/download_zip.png "Download as zip")
 
 Once you have downloaded the project, you will need to edit `parameters.json` to correspond to your YNAB setup. If you open that file you will see the following:
 
