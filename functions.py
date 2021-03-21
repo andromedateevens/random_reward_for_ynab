@@ -2,6 +2,7 @@ import random
 import requests
 import arrow
 import json
+import argparse
 
 def get_current_month():
 	"""
@@ -190,3 +191,26 @@ def validate_budget(budget_id, headers, budget_name):
 
 	return budget_id
 	
+def select_parameter(param, args, profile, default, profile_name):
+	"""
+	Chooses what value a parameter should have, with the priority ordering being 1) command-line argument 2) value from profile and 3) value from default.
+	Parameters:
+		param: string, the name of the parameter
+		args: argparse Namespace, the command-line arguments
+		profile: dict, the parameter values in the chosen profile
+		default: dict, the paramater values in the default profile (might be same as profile)
+		profile_name: str, name of the profile
+	Returns: tuple, (param_value (int or string), param_source (string))
+	"""
+	if getattr(args, param) != None:
+		param_value = getattr(args, param)
+		param_source = 'args'
+	elif param in profile:
+		param_value = profile[param]
+		param_source =  profile_name
+	elif param in default:
+		param_value = default[param]
+		param_source = 'default'
+	else:
+		raise ValueError(f'No value found for {param}')
+	return (param_value, param_source)

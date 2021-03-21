@@ -1,11 +1,14 @@
 {
-    "token": "Put Token Here",
-    "budget_name": "My Budget",
-    "budget_id": null,
-    "category_from_name": "Reward Money",
-    "category_from_id": null,
-    "category_to_name": "Fun Money",
-    "category_to_id": null,
-    "amount": 1.0,
-    "random_threshold": 0.5
+	"default":
+	{
+		"token": "Put Token Here",
+		"budget_name": "My Budget",
+		"budget_id": null,
+		"category_from_name": "Reward Money",
+		"category_from_id": null,
+		"category_to_name": "Fun Money",
+		"category_to_id": null,
+		"amount": 1.0,
+		"random_threshold": 0.5
+	}
 }
