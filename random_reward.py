@@ -9,8 +9,8 @@ parser.add_argument('--token')
 parser.add_argument('--budget_name')
 parser.add_argument('--category_from_name')
 parser.add_argument('--category_to_name')
-parser.add_argument('--amount', type=int)
-parser.add_argument('--random_threshold', type=int)
+parser.add_argument('--amount', type=float)
+parser.add_argument('--random_threshold', type=float)
 args = parser.parse_args()
 
 profile_name = args.profile
