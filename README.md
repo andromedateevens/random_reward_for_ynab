@@ -42,7 +42,14 @@ Once you have downloaded the project, you will need to edit `parameters.json` to
 }
 ```
 
-We will go through each of these parameters in turn. First of all you will need a security token, which allows RRY to communicate with your YNAB account. You can use [this guide from YNAB](https://api.youneedabudget.com/#personal-access-tokens) to create a token. Copy the token to your clipboard and replace "Put Token Here" with it, keeping the quotation marks. IMPORTANT NOTE: Do not share your token with anyone. Use it only with your local copy of RRY.
+We will go through each of these parameters in turn. First of all you will need a security token, which allows RRY to communicate with your YNAB account. You can use [this guide from YNAB](https://api.youneedabudget.com/#personal-access-tokens) to create a token. Copy the token to your clipboard and replace "Put Token Here" with it, keeping the quotation marks.
+
+IMPORTANT NOTE: Do not share your token with anyone. Use it only with your local copy of RRY.  It's a good idea to run
+
+```shell
+$ git update-index --assume-unchanged parameters.json
+```
+so you don't accidentally commit your YNAB API token.
 
 Besides the token, the remaining paramters are largely self-explanatory. Budget and category IDs should be left as null, as they will be assigned by `ynab_setup.py`; if for some reason you want to enter them manually you may, but this is not recommended. Budget and category names must match exactly, including spaces and capitalization. `category_from` refers to the category you wish to transfer money out of, and `category_to` refers to the category you wish to transfer money into. `amount` is the amount of money in dollars that should be transferred. `random_threshold` is the probablity that money will be transferred each time you run RRY. The default value of 0.5 corresponds to a 50% chance for transfer each time; 0.1 would correspond to 10%, and so on.
 
