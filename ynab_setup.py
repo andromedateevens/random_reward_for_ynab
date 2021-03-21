@@ -37,4 +37,4 @@ f = open('parameters.json', 'w')
 with f as outfile:
 	json.dump(new_params, outfile, indent=4)
 
-print("Setup complete! Run ynab_intermittent_reward.py to begin random rewards!")
+print("Setup complete! Run random_reward.py to begin random rewards!")
