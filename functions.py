@@ -193,7 +193,8 @@ def validate_budget(budget_id, headers, budget_name):
 	
 def select_parameter(param, args, profile, default, profile_name):
 	"""
-	Chooses what value a parameter should have, with the priority ordering being 1) command-line argument 2) value from profile and 3) value from default.
+	Chooses what value a parameter should have, with the priority ordering being 
+	1) command-line argument 2) value from profile and 3) value from default.
 	Parameters:
 		param: string, the name of the parameter
 		args: argparse Namespace, the command-line arguments

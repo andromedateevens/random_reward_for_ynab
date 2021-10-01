@@ -3,12 +3,16 @@ import argparse
 from functions import *
 
 #parse arguments
+#usage of id arguments not recommended; they are here for completeness
 parser = argparse.ArgumentParser()
 parser.add_argument('--profile', default='default')
 parser.add_argument('--token')
 parser.add_argument('--budget_name')
+parser.add_argument('--budget_id')
 parser.add_argument('--category_from_name')
+parser.add_argument('--category_from_id')
 parser.add_argument('--category_to_name')
+parser.add_argument('--category_to_id')
 parser.add_argument('--amount', type=float)
 parser.add_argument('--random_threshold', type=float)
 args = parser.parse_args()
